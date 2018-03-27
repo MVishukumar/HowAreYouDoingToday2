@@ -4,6 +4,7 @@ import android.graphics.drawable.Icon;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,6 +12,7 @@ public class DescribeMoodPage extends AppCompatActivity {
 
     ImageView imageView; //singleMoodId
     TextView title, desc; //moodTitleId moodDescriptionId
+    TextView whatHappenedQuestion;
 
 
     @Override
@@ -30,9 +32,12 @@ public class DescribeMoodPage extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.singleMoodId);
         title = (TextView) findViewById(R.id.moodTitleId);
         desc = (TextView) findViewById(R.id.moodDescriptionId);
+        whatHappenedQuestion = (TextView) findViewById(R.id.whatHappenedTextViewId);
 
         imageView.setImageResource(R.drawable.happy);
         title.setText(moodState);
         desc.setText(moodConsolingMessage);
+        whatHappenedQuestion.setText(whatHappenedQuestion.getText() + " " + moodState + "?");
+
     }
 }
