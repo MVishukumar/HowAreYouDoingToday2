@@ -4,6 +4,7 @@ import android.graphics.drawable.Icon;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,13 +32,17 @@ public class DescribeMoodPage extends AppCompatActivity {
 
         imageView = (ImageView) findViewById(R.id.singleMoodId);
         title = (TextView) findViewById(R.id.moodTitleId);
-        desc = (TextView) findViewById(R.id.moodDescriptionId);
+        //desc = (TextView) findViewById(R.id.moodDescriptionId);
         whatHappenedQuestion = (TextView) findViewById(R.id.whatHappenedTextViewId);
 
         imageView.setImageResource(R.drawable.happy);
         title.setText(moodState);
-        desc.setText(moodConsolingMessage);
-        whatHappenedQuestion.setText(whatHappenedQuestion.getText() + " " + moodState + "?");
+        //desc.setText(moodConsolingMessage);
+        whatHappenedQuestion.setText(whatHappenedQuestion.getText() + " " + moodState + " today?");
 
+    }
+
+    public void saveButtonClicked(View v) {
+        Log.d("tag", "Save button was clicked");
     }
 }

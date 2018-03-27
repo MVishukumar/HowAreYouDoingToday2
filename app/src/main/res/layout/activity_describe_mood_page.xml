@@ -92,7 +92,8 @@
                 android:text="Save"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:layout_margin="5dp"/>
+                android:layout_margin="5dp"
+                android:onClick="saveButtonClicked"/>
 
 
         </LinearLayout>
