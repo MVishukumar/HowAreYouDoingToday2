@@ -2,7 +2,10 @@ package com.example.vishukumar.howareyoudoingtoday;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Icon;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -117,6 +120,7 @@ public class DescribeMoodPage extends AppCompatActivity {
 
     }
 
+
     public void quitOrResultsButtonClicked(View v) {
 
         switch (v.getId()) {
@@ -126,17 +130,25 @@ public class DescribeMoodPage extends AppCompatActivity {
                 break;
             case R.id.showResultButtonId:
                 Log.d("tag", "Show Result Button Clicked");
+
+                Intent i = new Intent(DescribeMoodPage.this, BarCharResultPage.class);
+                startActivity(i);
+
                 break;
         }
 
         Log.d("tag", "Ok or Cancel Button Clicked");
     }
 
+
     public void quitApp() {
-        Log.d("tag", "Quitting App");
-        int pid = android.os.Process.myPid();
-        Log.d("tag", "PID : " + pid);
-        android.os.Process.killProcess(pid);
+
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
         System.exit(0);
+
     }
 }

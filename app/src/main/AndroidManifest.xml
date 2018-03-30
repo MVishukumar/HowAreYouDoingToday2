@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MoodsPage" />
-        <activity android:name=".DescribeMoodPage"></activity>
+        <activity android:name=".DescribeMoodPage" />
+        <activity android:name=".BarCharResultPage"></activity>
     </application>
 
 </manifest>
