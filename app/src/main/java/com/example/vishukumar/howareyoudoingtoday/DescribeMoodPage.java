@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -83,7 +85,8 @@ public class DescribeMoodPage extends AppCompatActivity {
             //Show custom dialog
             AlertDialog.Builder builder = new AlertDialog.Builder(DescribeMoodPage.this);
             View view = getLayoutInflater().inflate(R.layout.after_saving_status_popup_page, null);
-            TextView textView = (TextView) findViewById(R.id.consoleMessageId);
+            TextView textView = (TextView) view.findViewById(R.id.consoleMessageId);
+            textView.setText(moodConsolingMessage);
             //Button quitAppButton = (Button) findViewById(R.id.quitAppButtonId);
             //Button showResultButton = (Button) findViewById(R.id.showResultButtonId);
 
@@ -119,6 +122,7 @@ public class DescribeMoodPage extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.quitAppButtonId:
                 Log.d("tag", "Quit App Button Clicked");
+                quitApp();
                 break;
             case R.id.showResultButtonId:
                 Log.d("tag", "Show Result Button Clicked");
@@ -126,5 +130,13 @@ public class DescribeMoodPage extends AppCompatActivity {
         }
 
         Log.d("tag", "Ok or Cancel Button Clicked");
+    }
+
+    public void quitApp() {
+        Log.d("tag", "Quitting App");
+        int pid = android.os.Process.myPid();
+        Log.d("tag", "PID : " + pid);
+        android.os.Process.killProcess(pid);
+        System.exit(0);
     }
 }
