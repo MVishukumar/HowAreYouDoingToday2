@@ -12,4 +12,5 @@
     <string name="what_happened_question">What made you feel</string>
     <string name="show_result">Show Result</string>
     <string name="quit_app">Quit App</string>
+    <string name="daybook">Daybook</string>
 </resources>
