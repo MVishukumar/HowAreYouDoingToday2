@@ -18,7 +18,7 @@
             android:layout_height="100dp"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/saved" />
+            android:background="@drawable/save" />
 
         <TextView
             style="@style/Base.TextAppearance.AppCompat.Title"

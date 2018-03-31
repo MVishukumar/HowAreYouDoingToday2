@@ -41,7 +41,7 @@ public class AppBannerPage extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        }, 000);
+        }, 3000);
 
     }
 

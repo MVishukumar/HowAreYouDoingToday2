@@ -136,7 +136,7 @@ public class DescribeMoodPage extends AppCompatActivity {
                     startActivity(i);
                 }
 
-            }, 2000L);
+            }, 1000L);
 
             Log.d("tag", "Database Insertion Id : " + result);
         }
