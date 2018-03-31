@@ -3,6 +3,7 @@ package com.example.vishukumar.howareyoudoingtoday;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Icon;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -38,6 +39,12 @@ public class DescribeMoodPage extends AppCompatActivity {
     String moodState;
     String moodConsolingMessage;
 
+    Typeface vegur_light;
+    Typeface vegur_bold;
+    Typeface vegur_regular;
+    Typeface janda;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +68,19 @@ public class DescribeMoodPage extends AppCompatActivity {
         title.setText(moodState);
         //desc.setText(moodConsolingMessage);
         whatHappenedQuestion.setText(whatHappenedQuestion.getText() + " " + moodState + " today?");
+
+        vegur_light = Typeface.createFromAsset(getAssets(), "Vegur-Light.otf");
+        vegur_bold = Typeface.createFromAsset(getAssets(), "Vegur-Bold.otf");
+        vegur_regular = Typeface.createFromAsset(getAssets(), "Vegur-Regular.otf");
+        janda = Typeface.createFromAsset(getAssets(), "janda-manatee.bubble.ttf");
+
+        title.setTypeface(vegur_bold);
+        whatHappenedQuestion.setTypeface(vegur_regular);
+
+        whatHappenedEditText = (EditText) findViewById(R.id.whatHappenedEditTextId);
+        whatHappenedEditText.setTypeface(janda);
+
+
 
     }
 

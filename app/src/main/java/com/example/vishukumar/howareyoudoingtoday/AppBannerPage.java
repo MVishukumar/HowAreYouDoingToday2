@@ -32,7 +32,7 @@ public class AppBannerPage extends AppCompatActivity {
 
         subtitleAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.subtitle);
         appSubtitle.setAnimation(subtitleAnimation);
-        /*
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -42,7 +42,7 @@ public class AppBannerPage extends AppCompatActivity {
                 finish();
             }
         }, 5000);
-        */
+
     }
 
 

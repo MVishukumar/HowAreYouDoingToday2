@@ -1,14 +1,31 @@
 package com.example.vishukumar.howareyoudoingtoday;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.Random;
 
 public class MoodsPage extends AppCompatActivity {
+
+    TextView howAreYouQuestion,
+            happyTextView,
+            anxiousTextView,
+            angryTextView,
+            demotivatedTextView,
+            worthlessTextView,
+            sadTextView;
+    Typeface helvatica;
+    Typeface groBold;
+    Typeface montserrat;
+    Typeface montserrat_bold;
+    Typeface vegur_light;
+    Typeface vegur_bold;
+    Typeface vegur_regular;
 
     private String[] happyMessages = {
             "Wow! Good to hear that!",
@@ -97,6 +114,36 @@ public class MoodsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood_page_2);
         Log.d("tag", "onCreate of MoodsPage");
+
+        //Create all typefaces
+        helvatica = Typeface.createFromAsset(getAssets(), "HELR45W.ttf");
+        groBold = Typeface.createFromAsset(getAssets(), "GROBOLD.ttf");
+        montserrat = Typeface.createFromAsset(getAssets(), "Montserrat-Regular.ttf");
+        montserrat_bold = Typeface.createFromAsset(getAssets(), "Montserrat-Bold.ttf");
+        vegur_light = Typeface.createFromAsset(getAssets(), "Vegur-Light.otf");
+        vegur_bold = Typeface.createFromAsset(getAssets(), "Vegur-Bold.otf");
+        vegur_regular = Typeface.createFromAsset(getAssets(), "Vegur-Regular.otf");
+
+        // Reference to text inside all the card
+        happyTextView = (TextView) findViewById(R.id.happyTextViewId);
+        anxiousTextView = (TextView) findViewById(R.id.anxiousTextViewId);
+        angryTextView = (TextView) findViewById(R.id.angryTextViewId);
+        demotivatedTextView = (TextView) findViewById(R.id.demotivatedTextViewId);
+        worthlessTextView = (TextView) findViewById(R.id.worthlessTextViewId);
+        sadTextView = (TextView) findViewById(R.id.sadTextViewId);
+        howAreYouQuestion = (TextView) findViewById(R.id.howAreYouQuestionTVId);
+
+
+        // Set typeface for text inside card
+        happyTextView.setTypeface(vegur_bold);
+        anxiousTextView.setTypeface(vegur_bold);
+        angryTextView.setTypeface(vegur_bold);
+        demotivatedTextView.setTypeface(vegur_bold);
+        worthlessTextView.setTypeface(vegur_bold);
+        sadTextView.setTypeface(vegur_bold);
+        howAreYouQuestion.setTypeface(vegur_bold);
+
+
     }
 
     public void myCardClicked(View v) {

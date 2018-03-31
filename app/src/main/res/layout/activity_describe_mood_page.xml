@@ -29,7 +29,7 @@
                 android:layout_marginTop="16dp"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="This is test heading"
+                android:text="@string/this_is_test_heading"
                 android:textAlignment="center" />
 
             <ImageView
@@ -39,16 +39,6 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter" />
 
-            <TextView
-                android:id="@+id/moodDescriptionId"
-                style="@style/Base.TextAppearance.AppCompat.Body2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ellipsize="end"
-                android:maxLines="10"
-                android:text="This is test footer"
-                android:textAlignment="center" />
 
         </LinearLayout>
 
@@ -63,6 +53,7 @@
                 android:id="@+id/whatHappenedTextViewId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/what_happened_question" />
 
             <EditText
