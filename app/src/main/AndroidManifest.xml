@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".MoodsPage" />
         <activity android:name=".DescribeMoodPage" />
-        <activity android:name=".BarCharResultPage"></activity>
+        <activity android:name=".BarCharResultPage" />
+        <activity android:name=".AfterSaveGyaan"></activity>
     </application>
 
 </manifest>

@@ -73,16 +73,11 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/orange_button"
 
-                android:gravity="center_horizontal"
-                android:shadowColor="#494B5C"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="5"
                 android:text="Save"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:layout_margin="5dp"
                 android:onClick="saveButtonClicked"/>
 
