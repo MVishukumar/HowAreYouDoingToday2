@@ -116,9 +116,6 @@ public class DescribeMoodPage extends AppCompatActivity {
             //Show custom dialog
             AlertDialog.Builder builder = new AlertDialog.Builder(DescribeMoodPage.this);
             View view = getLayoutInflater().inflate(R.layout.popup, null);
-            imageViewSave = (ImageView) view.findViewById(R.id.imageViewSaveId);
-            fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.subtitle);
-            imageViewSave.setAnimation(fadeIn);
 
             builder.setView(view);
             AlertDialog alertDialog = builder.create();
@@ -136,7 +133,7 @@ public class DescribeMoodPage extends AppCompatActivity {
                     startActivity(i);
                 }
 
-            }, 1000L);
+            }, 3000L);
 
             Log.d("tag", "Database Insertion Id : " + result);
         }
