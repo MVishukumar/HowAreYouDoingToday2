@@ -1,9 +1,11 @@
 package com.example.vishukumar.howareyoudoingtoday;
 
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.ScrollView;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -29,10 +31,30 @@ public class BarCharResultPage extends AppCompatActivity {
 
     ScrollView scrollView;
 
+    StatusDatabaseHelper statusDatabaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_char_result_page);
+
+        //Read data from database
+        statusDatabaseHelper = new StatusDatabaseHelper(this);
+
+        Cursor cursor = statusDatabaseHelper.getAllStatus();
+        if(cursor.getCount() == 0) {
+            Log.d("tag", "No Entries in Database");
+        } else {
+            Log.d("tag", "Printing entries from Database");
+            while (cursor.moveToNext()) {
+                Log.d("tag", cursor.getString(0));
+                Log.d("tag", cursor.getString(1));
+                Log.d("tag", cursor.getString(2));
+                Log.d("tag", cursor.getString(3));
+                Log.d("tag", "\n");
+            }
+        }
+
         scrollView = (ScrollView) findViewById(R.id.barChartMainScrollViewId);
         scrollView.fullScroll(ScrollView.FOCUS_UP);
 
