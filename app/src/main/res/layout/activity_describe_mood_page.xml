@@ -54,7 +54,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/what_happened_question" />
+                android:text="@string/what_happened_question"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/whatHappenedEditTextId"
@@ -66,7 +67,8 @@
                 android:inputType="textCapSentences|textMultiLine"
                 android:lines="4"
                 android:maxLength="2000"
-                android:maxLines="4" />
+                android:maxLines="4"
+                />
 
             <Button
                 android:id="@+id/angry_btn"

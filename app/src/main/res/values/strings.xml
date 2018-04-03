@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">How Are You Doing Today</string>
+    <string name="app_name">Daybook</string>
     <string name="question">How are you feeling today?</string>
 
     <string name="happy_text">Happy</string>
