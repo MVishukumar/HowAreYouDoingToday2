@@ -118,21 +118,21 @@ public class BarCharResultPage extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "1 I am happy because..."));
-        diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "2 I am happy because..."));
-        diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "3 I am happy because..."));
+        diaryStatusList.add(new DiaryStatus("2018-03-03", "Anxious", "2 I am happy because..."));
+        diaryStatusList.add(new DiaryStatus("2018-03-03", "Demotivated", "3 I am happy because..."));
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "4 I am happy because..."));
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "5 I am happy because..."));
-        diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "6 I am happy because..."));
+        diaryStatusList.add(new DiaryStatus("2018-03-03", "Worthless", "6 I am happy because..."));
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "7 I am happy because..."));
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "8 I am happy because..."));
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "9 I am happy because..."));
-        diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "10 I am happy because..."));
-        diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "11 I am happy because..."));
+        diaryStatusList.add(new DiaryStatus("2018-03-03", "Angry", "10 I am happy because..."));
+        diaryStatusList.add(new DiaryStatus("2018-03-03", "Sad", "11 I am happy because..."));
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "12 I am happy because..."));
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "13 I am happy because..."));
-        diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "14 I am happy because..."));
+        diaryStatusList.add(new DiaryStatus("2018-03-03", "Demotivated", "14 I am happy because..."));
         diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "15 I am happy because..."));
-        diaryStatusList.add(new DiaryStatus("2018-03-03", "Happy", "16 I am happy because..."));
+        diaryStatusList.add(new DiaryStatus("2018-03-03", "Sad", "16 I am happy because..."));
 
         diaryStatusAdapter = new DiaryStatusAdapter(this, diaryStatusList);
 

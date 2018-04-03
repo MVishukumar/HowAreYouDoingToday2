@@ -1,6 +1,7 @@
 package com.example.vishukumar.howareyoudoingtoday;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -34,6 +35,28 @@ public class DiaryStatusAdapter extends RecyclerView.Adapter<DiaryStatusAdapter.
     @Override
     public void onBindViewHolder(@NonNull StudentViewHolder holder, int position) {
         final DiaryStatus diaryStatus = diaryStatusList.get(position);
+
+        switch (diaryStatus.getMood().toUpperCase()) {
+            case "HAPPY" :
+                holder.textView2.setTextColor(Color.GREEN);
+                break;
+            case "ANXIOUS":
+                holder.textView2.setTextColor(Color.YELLOW);
+                break;
+            case "ANGRY" :
+                holder.textView2.setTextColor(Color.RED);
+                break;
+            case "WORTHLESS":
+                holder.textView2.setTextColor(Color.BLUE);
+                break;
+            case "SAD" :
+                holder.textView2.setTextColor(Color.GREEN);
+                break;
+            case "DEMOTIVATED":
+                holder.textView2.setTextColor(Color.YELLOW);
+                break;
+        }
+
         holder.textView1.setText(diaryStatus.getDate());
         holder.textView2.setText(diaryStatus.getMood());
         holder.textView3.setText(diaryStatus.getDescription());
