@@ -27,7 +27,8 @@ public class DiaryStatusAdapter extends RecyclerView.Adapter<DiaryStatusAdapter.
     @Override
     public StudentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.list_layout, null);
+        //View view = layoutInflater.inflate(R.layout.list_layout, null);
+        View view = layoutInflater.inflate(R.layout.list_layout_all_status, null);
         StudentViewHolder studentViewHolder = new StudentViewHolder(view);
         return studentViewHolder;
     }
@@ -35,27 +36,6 @@ public class DiaryStatusAdapter extends RecyclerView.Adapter<DiaryStatusAdapter.
     @Override
     public void onBindViewHolder(@NonNull StudentViewHolder holder, int position) {
         final DiaryStatus diaryStatus = diaryStatusList.get(position);
-
-        switch (diaryStatus.getMood().toUpperCase()) {
-            case "HAPPY" :
-                holder.textView2.setTextColor(Color.GREEN);
-                break;
-            case "ANXIOUS":
-                holder.textView2.setTextColor(Color.YELLOW);
-                break;
-            case "ANGRY" :
-                holder.textView2.setTextColor(Color.RED);
-                break;
-            case "WORTHLESS":
-                holder.textView2.setTextColor(Color.BLUE);
-                break;
-            case "SAD" :
-                holder.textView2.setTextColor(Color.GREEN);
-                break;
-            case "DEMOTIVATED":
-                holder.textView2.setTextColor(Color.YELLOW);
-                break;
-        }
 
         holder.textView1.setText(diaryStatus.getDate());
         holder.textView2.setText(diaryStatus.getMood());

@@ -18,12 +18,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/appSubtitleTextViewId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/appNameTextViewId"
-        android:layout_centerHorizontal="true"
-        android:text="Your emotional diary" />
 
 </RelativeLayout>
