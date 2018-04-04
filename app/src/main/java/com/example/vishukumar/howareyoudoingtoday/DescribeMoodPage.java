@@ -109,6 +109,8 @@ public class DescribeMoodPage extends AppCompatActivity {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             String formattedDate = simpleDateFormat.format(date);
             Log.d("tag","Date formatted : " + formattedDate);
+            Log.d("tag","Mood State : " + moodState);
+            Log.d("tag","Status : " + todayStatus);
 
             int result = statusDatabaseHelper.addEntryInMyDiary(formattedDate, moodState, todayStatus);
 

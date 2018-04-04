@@ -42,7 +42,13 @@ public class StatusDatabaseHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public int addEntryInMyDiary(String date, String desc, String mood) {
+    public int addEntryInMyDiary(String date, String mood, String desc) {
+        Log.d("tag","****** Database Save ******");
+        Log.d("tag","Date : " + date);
+        Log.d("tag","Description : " + desc);
+        Log.d("tag","Mood : " + mood);
+        Log.d("tag","******");
+
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2, date);
@@ -54,8 +60,19 @@ public class StatusDatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getAllStatus() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " ORDER BY DATE DESC", null);
         return cursor;
     }
 
+    public Cursor getAllEmotionsCount() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT MOOD, COUNT(MOOD) FROM " + TABLE_NAME + " GROUP BY MOOD ORDER BY MOOD", null);
+        return cursor;
+    }
+
+    public Cursor getAllStatus(String onTouchMood) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE UPPER(MOOD) = '" + onTouchMood.toUpperCase() + "'" + " ORDER BY DATE DESC", null);
+        return cursor;
+    }
 }
