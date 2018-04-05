@@ -59,7 +59,7 @@ public class DescribeMoodPage extends AppCompatActivity {
 
         Log.d("tag", "inside onCreate of DescribeMoodPage");
 
-        Bundle bundle = getIntent().getExtras();
+        /*Bundle bundle = getIntent().getExtras();
         moodState = bundle.getString("MOOD_STATUS");
         moodConsolingMessage = bundle.getString("MOOD_CONSOLING_MESSAGE");
 
@@ -85,12 +85,13 @@ public class DescribeMoodPage extends AppCompatActivity {
         whatHappenedQuestion.setTypeface(vegur_regular);
 
         whatHappenedEditText = (EditText) findViewById(R.id.whatHappenedEditTextId);
-        whatHappenedEditText.setTypeface(janda);
+        whatHappenedEditText.setTypeface(janda);*/
 
 
 
     }
 
+    /*
     public void saveButtonClicked(View v) {
         Log.d("tag", "Save button was clicked");
 
@@ -144,5 +145,6 @@ public class DescribeMoodPage extends AppCompatActivity {
         Log.d("tag", "End of onclick");
 
     }
+    */
 
 }

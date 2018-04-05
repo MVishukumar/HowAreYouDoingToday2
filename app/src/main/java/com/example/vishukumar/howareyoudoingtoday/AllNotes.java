@@ -27,7 +27,6 @@ public class AllNotes extends AppCompatActivity {
 
     List<DiaryStatus> diaryStatusList;
 
-    ScrollView scrollView;
 
     StatusDatabaseHelper statusDatabaseHelper;
     ArrayList<BarEntry> barEntries;
@@ -62,10 +61,16 @@ public class AllNotes extends AppCompatActivity {
     //4 buttons on top
     ImageButton quitButton, graphButton, newStatusButton, quotesButton;
 
+    //Main Scroll View
+    ScrollView scrollView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_notes);
+
+        //Reference scroll view and scroll it to top
+        scrollView = (ScrollView) findViewById(R.id.mainScrollViewId);
+        scrollView.smoothScrollTo(0,0);
 
         //Create all 4 buttons
         quitButton = (ImageButton) findViewById(R.id.imageButtonQuit);
