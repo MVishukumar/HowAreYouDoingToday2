@@ -6,21 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".AllNotes">
 
-    <android.support.v7.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:nestedScrollingEnabled="true"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="10dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="10">
 
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerViewId"
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp"
+            android:layout_weight="1"
+            android:layout_gravity="top">
 
 
-    </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/imageButtonQuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/btn_dialog"
+                    android:onClick="imageButtonClicked"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonGraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/ic_menu_today"
+                    android:onClick="imageButtonClicked"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/ic_input_add"
+                    android:onClick="imageButtonClicked"/>
+
+                <ImageButton
+                    android:id="@+id/imageButtonQuote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/ic_dialog_alert"
+                    android:onClick="imageButtonClicked"/>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:nestedScrollingEnabled="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="1dp"
+            android:layout_weight="9">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+
+
+
+
 
 </ScrollView>

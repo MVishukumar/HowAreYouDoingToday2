@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -14,7 +14,6 @@
         android:weightSum="10"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/soundcloud"
         >
 
         <RelativeLayout
@@ -26,7 +25,7 @@
                 android:id="@+id/howAreYouQuestionTVId"
                 android:text="@string/question"
                 android:textSize="25sp"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorGrey"
                 android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -41,7 +40,7 @@
             android:columnOrderPreserved="false"
             android:layout_weight="8"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:padding="14dp"
             >
 
@@ -58,32 +57,22 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:onClick="myCardClicked"
+                app:cardBackgroundColor="@color/colorGrey"
                 >
 
-                <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:src="@drawable/happy"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/happyTextViewId"
+                    android:text="@string/happy_text"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"/>
 
-                    <TextView
-                        android:id="@+id/happyTextViewId"
-                        android:text="@string/happy_text"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
 
-                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -100,32 +89,21 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:onClick="myCardClicked"
+                app:cardBackgroundColor="@color/colorGrey"
                 >
 
-                <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:src="@drawable/happy"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/anxiousTextViewId"
+                    android:text="@string/anxious_text"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"/>
 
-                    <TextView
-                        android:id="@+id/anxiousTextViewId"
-                        android:text="@string/anxious_text"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -143,32 +121,20 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:onClick="myCardClicked"
+                app:cardBackgroundColor="@color/colorGrey"
                 >
 
-                <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:src="@drawable/happy"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:id="@+id/angryTextViewId"
-                        android:text="@string/angry_text"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/angryTextViewId"
+                    android:text="@string/angry_text"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"/>
 
             </android.support.v7.widget.CardView>
 
@@ -185,32 +151,20 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:onClick="myCardClicked"
+                app:cardBackgroundColor="@color/colorGrey"
                 >
 
-                <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:src="@drawable/happy"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:id="@+id/demotivatedTextViewId"
-                        android:text="@string/demotivated_text"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/demotivatedTextViewId"
+                    android:text="@string/demotivated_text"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"/>
 
             </android.support.v7.widget.CardView>
 
@@ -228,32 +182,21 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:onClick="myCardClicked"
+                app:cardBackgroundColor="@color/colorGrey"
                 >
 
-                <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:src="@drawable/happy"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/worthlessTextViewId"
+                    android:text="@string/worthless_text"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"/>
 
-                    <TextView
-                        android:id="@+id/worthlessTextViewId"
-                        android:text="@string/worthless_text"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -270,32 +213,21 @@
                 app:cardElevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:onClick="myCardClicked"
+                app:cardBackgroundColor="@color/colorGrey"
                 >
 
-                <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:src="@drawable/happy"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:id="@+id/sadTextViewId"
-                        android:text="@string/sad_text"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/sadTextViewId"
+                    android:text="@string/sad_text"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    />
 
             </android.support.v7.widget.CardView>
 
@@ -304,4 +236,4 @@
 
     </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>

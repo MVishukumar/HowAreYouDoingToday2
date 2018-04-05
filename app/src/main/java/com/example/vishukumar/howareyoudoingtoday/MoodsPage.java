@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -109,6 +112,8 @@ public class MoodsPage extends AppCompatActivity {
             "Don't let the darkness steal the beautiful person you have inside, cheer up!!!"
     };
 
+    Animation bounceAnimation;
+    CardView cardViewHappy, cardViewAnxious, cardViewAngry, cardViewDemotivated, cardViewWorthless, cardViewSad;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,7 +148,24 @@ public class MoodsPage extends AppCompatActivity {
         sadTextView.setTypeface(vegur_bold);
         howAreYouQuestion.setTypeface(vegur_bold);
 
+        // Reference All CardViews
+        cardViewHappy = (CardView) findViewById(R.id.happyCard);
+        cardViewAnxious = (CardView) findViewById(R.id.anxiousCard);
+        cardViewAngry = (CardView) findViewById(R.id.angryCard);
+        cardViewDemotivated = (CardView) findViewById(R.id.demotivatedCard);
+        cardViewWorthless = (CardView) findViewById(R.id.worthlessCard);
+        cardViewSad = (CardView) findViewById(R.id.sadCard);
 
+        // Create Animation
+        bounceAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bounce);
+
+        // Set animation to all the cards.
+        cardViewHappy.setAnimation(bounceAnimation);
+        cardViewAnxious.setAnimation(bounceAnimation);
+        cardViewAngry.setAnimation(bounceAnimation);
+        cardViewDemotivated.setAnimation(bounceAnimation);
+        cardViewWorthless.setAnimation(bounceAnimation);
+        cardViewSad.setAnimation(bounceAnimation);
     }
 
     public void myCardClicked(View v) {

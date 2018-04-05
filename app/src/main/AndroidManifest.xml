@@ -20,7 +20,9 @@
         <activity android:name=".DescribeMoodPage" />
         <activity android:name=".BarCharResultPage" />
         <activity android:name=".AfterSaveGyaan" />
-        <activity android:name=".AllNotes"></activity>
+        <activity android:name=".AllNotes" />
+        <activity android:name=".NewStatusPage" />
+        <activity android:name=".IndividualStatusDisplayPage"></activity>
     </application>
 
 </manifest>
