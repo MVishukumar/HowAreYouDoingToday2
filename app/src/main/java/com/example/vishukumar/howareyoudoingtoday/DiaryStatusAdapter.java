@@ -1,6 +1,7 @@
 package com.example.vishukumar.howareyoudoingtoday;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -44,6 +45,13 @@ public class DiaryStatusAdapter extends RecyclerView.Adapter<DiaryStatusAdapter.
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "" + diaryStatus, Toast.LENGTH_SHORT).show();
+
+                Intent toIndividualStatusPage = new Intent(context, IndividualStatusDisplayPage.class);
+                toIndividualStatusPage.putExtra("_DATE", diaryStatus.getDate());
+                toIndividualStatusPage.putExtra("_MOOD", diaryStatus.getMood());
+                toIndividualStatusPage.putExtra("_DESC", diaryStatus.getDescription());
+                context.startActivity(toIndividualStatusPage);
+
             }
         });
     }
